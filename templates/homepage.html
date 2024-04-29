@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autism Spectrum Disease Prediction</title>
+    <style>
+        /* Add your CSS styles here */
+    </style>
+</head>
+<body>
+    <h1>Autism Spectrum Disease Prediction</h1>
+    <form action="/prediction" method="post">
+        <!-- Questions for Child -->
+        <div id="childQuestions" style="display: none;">
+            <div>
+            <label for="A1">1) Does your child look at you when you call his/her name? </label>
+        <select id="A1" name="A1">
+            <option value=1>Yes</option>
+            <option value=0>No</option>
+        </select>
+            </div>
+
+    
+           <div> 
+        <label for="A2">2) How easy is it for you to get eye contact with your child?  </label>
+        <select id="A2" name="A2">
+            <option value=1>Yes</option>
+            <option value=0>No</option>
+        </select>
+           </div>
+
+
+        <div>
+        <label for="A3">3) Does your child point to indicate that she/he wants something? (e.g. a toy that is out of reach)  </label>
+        <select id="A3" name="A3">
+            <option value=1>Yes</option>
+            <option value=0>No</option>
+        </select>
+        </div>
+
+
+        <div>
+        <label for="A4">4) Does your child point to share interest with you? (e.g. pointing at an 
+            interesting sight) </label>
+        <select id="A4" name="A4">
+            <option value=1>Yes</option>
+            <option value=0>No</option>
+        </select>
+        </div>
+
+        <div>
+        <label for="A5">5) Does your child pretend? (e.g. care for dolls, talk on a toy phone) </label>
+        <select id="A5" name="A5">
+            <option value=1>Yes</option>
+            <option value=0>No</option>
+        </select>
+        </div>
+
+        <div>
+        <label for="A6">6) Does your child follow where you’re looking? </label>
+        <select id="A6" name="A6">
+            <option value=1>Yes</option>
+            <option value=0>No</option>
+        </select>
+        </div>
+
+        <div>
+        <label for="A7">7) If you or someone else in the family is visibly upset, does your child show signs 
+            of wanting to comfort them? (e.g. stroking hair, hugging them)</label>
+        <select id="A7" name="A7">
+            <option value=1>Yes</option>
+            <option value=0>No</option>
+        </select>
+        </div>
+
+        <div>
+        <label for="A8">8) Would you describe your child’s first words as: </label>
+        <select id="A8" name="A8">
+            <option value=1>Yes</option>
+            <option value=0>No</option>
+        </select>
+        </div>
+
+        <div>
+        <label for="A9">9) Does your child use simple gestures? (e.g. wave goodbye)  </label>
+        <select id="A9" name="A9">
+            <option value=1>Yes</option>
+            <option value=0>No</option>
+        </select>
+        </div>
+
+        <div>
+        <label for="A10">10) Does your child stare at nothing with no apparent purpose? </label>
+        <select id="A10" name="A10">
+            <option value=1 >Yes</option>
+            <option value=0>No</option>
+        </select>
+        </div>
+ 
+            <!-- Add more questions for Child as needed -->
+        </div>
+
+       
+
+        <label for="age">Age(In Months):</label>
+<input type="number" id="age" name="age" onchange="toggleQuestions()">
+  
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+            <option value=1>Male</option>
+            <option value=0>Female</option>
+            
+        </select>
+        
+        <label for="jaundice">Previously suffered from jaundice?</label>
+        <select id="jaundice" name="jaundice">
+            <option value=1>Yes</option>
+            <option value=0>No</option>
+        </select>
+        
+        <label for="Family_mem_with_ASD">Any family member had autism?</label>
+        <select id="Family_mem_with_ASD" name="Family_mem_with_ASD">
+            <option value=1>Yes</option>
+            <option value=0>No</option>
+        </select>
+
+    
+        
+        <button type="submit">Predict</button>
+        <script>
+            function toggleQuestions() {
+                var childQuestions = document.getElementById("childQuestions");
+                childQuestions.style.display = "block";
+            }
+        </script>
+    </form>
+</body>
+</html>
